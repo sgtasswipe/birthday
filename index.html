@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday ❤️</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<main class="container">
+
+    <h1>Happy Birthday ❤️</h1>
+
+    <p class="subtitle">
+        Stort tillykke med de 26 år min snutti. Jeg håber, at du bliver glad for dine gaver, og at du får hygget dig i dag. Jeg elsker dig overalt på jorden❤️
+    </p>
+
+    <section class="countdown-section">
+        <div class="countdown-title">Åbner om</div>
+
+        <div id="countdown" class="countdown">
+            <div class="time-box">
+                <span id="days">00</span>
+                <small>Days</small>
+            </div>
+
+            <div class="time-box">
+                <span id="hours">00</span>
+                <small>Hours</small>
+            </div>
+
+            <div class="time-box">
+                <span id="minutes">00</span>
+                <small>Minutes</small>
+            </div>
+
+            <div class="time-box">
+                <span id="seconds">00</span>
+                <small>Seconds</small>
+            </div>
+        </div>
+
+        <p id="status">
+            Du kan åbne gaven til midnat O.o
+        </p>
+    </section>
+
+    <img class="photo" src="images/photo1.jpg" alt="Photo">
+
+    <div class="message">
+        <p id="typewriter"></p>
+    </div>
+
+    <img class="photo" src="images/photo2.jpg" alt="Photo">
+
+    <section class="gift-section">
+
+        <div id="giftWrapper">
+
+            <div id="giftBox" class="gift disabled">
+
+                <div class="lid"></div>
+
+                <div class="box">
+
+                    <div class="ribbon vertical"></div>
+                    <div class="ribbon horizontal"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <button id="giftButton" disabled>
+            ÅBN MIN GAVE
+        </button>
+
+    </section>
+
+    <section id="giftContent" class="gift-content">
+
+        <h2>✨ Surprise ✨</h2>
+
+        <p>
+           VI SKAL I FUCKING ZOOOOOOOOOOOOOOO
+        </p>
+
+        <img class="photo" src="images/photo3.jpg" alt="Gift">
+
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
