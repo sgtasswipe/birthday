@@ -18,21 +18,20 @@ const typewriter = document.getElementById("typewriter");
 
 let index = 0;
 
-function typeText(){
+function typeText() {
 
-    if(index < message.length){
+    if (index < message.length) {
 
         typewriter.textContent += message.charAt(index);
 
         index++;
 
-        setTimeout(typeText,45);
+        setTimeout(typeText, 45);
 
     }
 
 }
 
-typeText();
 
 function updateCountdown(){
 
@@ -43,16 +42,21 @@ function updateCountdown(){
     if(diff <= 0){
 
         document.getElementById("status").textContent =
-            "The gift is ready.";
+            "Gaven er klar <3 ";
 
         document.getElementById("days").textContent="00";
         document.getElementById("hours").textContent="00";
         document.getElementById("minutes").textContent="00";
         document.getElementById("seconds").textContent="00";
 
-        giftButton.disabled=false;
+        giftButton.disabled = false;
 
-        return;
+     document.getElementById("status").textContent =
+    "Du må nu åbne gaven ❤️";
+
+clearInterval(timer);
+
+return;
 
     }
 
@@ -78,40 +82,35 @@ function updateCountdown(){
 
 }
 
-setInterval(updateCountdown,1000);
+const timer = setInterval(updateCountdown, 1000);
 
 updateCountdown();
 
-giftButton.addEventListener("click",()=>{
+giftButton.addEventListener("click", () => {
 
-    giftButton.disabled=true;
+    giftButton.disabled = true;
 
     giftBox.classList.add("open");
 
-    const duration=3000;
+    const duration = 3000;
+    const end = Date.now() + duration;
 
-    const end=Date.now()+duration;
-
-    (function frame(){
+    (function frame() {
 
         confetti({
 
-            particleCount:4,
-
-            startVelocity:30,
-
-            spread:360,
-
-            ticks:80,
-
-            origin:{
-                x:Math.random(),
-                y:Math.random()-0.2
+            particleCount: 5,
+            startVelocity: 30,
+            spread: 360,
+            ticks: 80,
+            origin: {
+                x: Math.random(),
+                y: Math.random() - 0.2
             }
 
         });
 
-        if(Date.now()<end){
+        if (Date.now() < end) {
 
             requestAnimationFrame(frame);
 
@@ -119,18 +118,22 @@ giftButton.addEventListener("click",()=>{
 
     })();
 
-    setTimeout(()=>{
+    setTimeout(() => {
 
         giftContent.classList.add("show");
 
+        // Start the typewriter only now
+        index = 0;
+        typewriter.textContent = "";
+        typeText();
+
         window.scrollTo({
 
-            top:giftContent.offsetTop-40,
-
-            behavior:"smooth"
+            top: giftContent.offsetTop - 40,
+            behavior: "smooth"
 
         });
 
-    },1400);
+    }, 1400);
 
 });
