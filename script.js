@@ -1,12 +1,7 @@
-const unlockDate = new Date(2026, 7, 3, 0, 0, 0);
+const unlockDate = new Date(2027, 7, 3, 0, 0, 0);
 
 const message = `
-Hvis du læser dette så er ventetiden ovre :D 
-Jeg ville lave noget lidt anderledes i år, da du også er blevet en tech snut 
-
-meeen
-
-nu er det tid til at åbne din anden gave... 
+Ses næste år  
 
 `.trim();
 
